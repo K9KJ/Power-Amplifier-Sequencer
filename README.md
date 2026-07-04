@@ -176,7 +176,7 @@ pio run -t erase && pio run -t upload
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [PlatformIO IDE extension](https://platformio.org/install/ide?install=vscode) for VS Code
-- [Git] Platform dependent
+- [Git](https://git-scm.com/install/) - Platform specific
 
 ### Setup
 
