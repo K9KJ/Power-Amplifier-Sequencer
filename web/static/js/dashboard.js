@@ -258,8 +258,13 @@
           },
           y: {
             beginAtZero: true,
-            // Keep both power axes in decimal watts, including small readings.
-            ticks: { color: textCol, font: { size: 10 }, format: { notation: 'standard', minimumFractionDigits: 1, maximumFractionDigits: 1 } },
+            // Format labels explicitly so Chart.js always displays tenths of a watt.
+            ticks: {
+              color: textCol,
+              font: { size: 10 },
+              precision: 1,
+              callback: function (value) { return Number(value).toFixed(1); }
+            },
             grid: { color: gridCol },
             title: { display: true, text: 'W', color: textCol, font: { size: 11 } }
           }
