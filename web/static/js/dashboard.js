@@ -258,7 +258,8 @@
           },
           y: {
             beginAtZero: true,
-            ticks: { color: textCol, font: { size: 10 } },
+            // Keep both power axes in decimal watts, including small readings.
+            ticks: { color: textCol, font: { size: 10 }, format: { notation: 'standard', minimumFractionDigits: 1, maximumFractionDigits: 1 } },
             grid: { color: gridCol },
             title: { display: true, text: 'W', color: textCol, font: { size: 11 } }
           }
